@@ -87,6 +87,7 @@ eb deploy
 
 Once it is finished, again, cd to your "client" folder and repeat the procedure to host your frontend server.
 ```shell
+cd [path_name]\client
 eb deploy
 ```
 
