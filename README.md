@@ -104,7 +104,7 @@ The running frontend dashboard can be found here: [http://acra-app-client-dev.us
 * [AWS Textract](https://aws.amazon.com/textract/) - Text-reading/recognition tool to extract words from images
 * [AWS Lex](https://aws.amazon.com/lex/) - To create our AI rule based chabot, EngiBot
 * [AWS S3](https://aws.amazon.com/s3/) - To store images and text files
-* [AWS RDS](https://aws.amazon.com/rds/) - To store relational schemas
+* [AWS RDS](https://aws.amazon.com/rds/) - Our cloud-based MySQL relational database
 * [AWS DynamoDB](https://aws.amazon.com/dynamodb/) - To generate charts based on data stored
 * [AWS SES](https://aws.amazon.com/ses/) - To send an email notification to customers and ACRA officers
 * [AWS SNS](https://aws.amazon.com/sns/) - To send a SMS notification to customers and ACRA officers
