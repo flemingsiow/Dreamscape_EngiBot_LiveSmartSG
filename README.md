@@ -1,140 +1,113 @@
-# Submission name
+# EngiBot
 
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://code-and-response.github.io/Project-Sample/)
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Website](https://img.shields.io/badge/View-Website-blue)](http://acra-app-client-dev.us-east-1.elasticbeanstalk.com/)
 
-A basic GitHub repository example for Call for Code submissions and those projects that join the Code and Response initiative. Not all sections or files are required. You can make this as simple or as in-depth as you need.
-
-*Read this in other languages: [English](README.md), [한국어](README.ko.md), [português](README.pt_br.md).*
+We are Team Dreamscape, a group of Singapore Polytechnic students that took part in the Live Smart Singapore Hackathon hosted by ACRA and AWS. The following is
+our team's proposed idea to help hasten and enhance the current business process in Singapore.
 
 ## Contents
 
 1. [Short description](#short-description)
-1. [Demo video](#demo-video)
-1. [The architecture](#the-architecture)
-1. [Long description](#long-description)
-1. [Project roadmap](#project-roadmap)
-1. [Getting started](#getting-started)
-1. [Running the tests](#running-the-tests)
+1. [The Architecture](#the-architecture)
+1. [Getting Started](#getting-started)
+1. [Deploying the Web Application](#deploying-the-web-application)
 1. [Live demo](#live-demo)
 1. [Built with](#built-with)
-1. [Contributing](#contributing)
 1. [Versioning](#versioning)
 1. [Authors](#authors)
 1. [License](#license)
-1. [Acknowledgments](#acknowledgments)
 
-## Short description
+## Short Description
 
-### What's the problem?
+### What's the Problem?
 
-Part of the World Health Organization's guidance on limiting further spread of COVID-19 is to practice social distancing. As a result, schools in most affected areas are taking precautionary measures by closing their facilities. With school-aged children at home for an indeterminate amount of time,  keeping them engaged, entertained, and on top of their education is important.
+For many years Singapore has been considered by the business world to be a safe, thriving and efficient entry point into the Asian Market. However, this also
+means Singapore has to ready to cope with the high influx of customers as well as be fully prepared in times of disruption. 
+
+ACRA, is a statutory board under the Ministry of Finance. It registers and regulate businesses, sole proprietorships, partnerships, public accountants, filing agents etc.
+It's goal is to provide an open corporate registry so that the public can obtain information about the business and the people running it.
+
 
 ### How can technology help?
 
-Schools and teachers can continue to engage with their students through virtual classrooms, and even create interactive spaces for classes. As parents face a new situation where they may need to homeschool their children, finding appropriate online resources is important as well.
+In order for ACRA to develop into an efficient and advanced business hub, it must have a sophisticated socio-economic framework to better support their customers. Smart Nation can be utilised to harnessed technology to the fullest to improve the satisfication of customers, create more opportunities, and build stronger communities between ACRA and its customers.
 
-### The idea
 
-It's imperative that learning and creating can continue when educational institutions have to shift the way they teach in times of crises, such as the COVID-19 pandemic. Providing a set of open source tools, backed by IBM Cloud and Watson Services, will enable educators to more easily make content available for their students.
+### Our Solution
 
-## Demo video
+EngiBot is a AI rule based chatbot API that adds on to the existing ACRA chatbot. It includes but not limited to automating the "Requesting" process for simple waiver appeals, responding to customer's needs and interests, as well as automating the decision making process for tasks that handles with generic information.
 
-[![Watch the video](https://github.com/Code-and-Response/Liquid-Prep/blob/master/images/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
 
-## The architecture
+## The Architecture
 
-![Video transcription/translation app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
+![EngiBot Architecture](https://github.com/flemingsiow/Dreamscape_EngiBot_LiveSmartSG/blob/master/EngiBot%20Architecture.jpg)
 
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
 
-## Long description
+## Getting Started
 
-[More detail is available here](DESCRIPTION.md)
+These instructions will get you a copy of our prototype up and deploying the project on a live system.
 
-## Project roadmap
+### Installing Node.js
 
-![Roadmap](roadmap.jpg)
+You will need to install Node.js to run our product. If you don't have a preference, get the latest version supported by Elastic Beanstalk.
 
-## Getting started
+Download Node.js at [https://nodejs.org/en/](https://nodejs.org/en/).
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Setting Up Our Product
 
-What things you need to install the software and how to install them
+Open up your Command Prompt or Terminal. 
 
-```bash
-dnf install wget
-wget http://www.example.com/install.sh
-bash install.sh
+cd into the "client" folder and npm install, this will install all the necessary node packages.
+
+```shell
+cd [path_name]\client
+npm install
 ```
 
-### Installing
+And repeat it for the "server" folder
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be, for example
-
-```bash
-export TOKEN="fffd0923aa667c617a62f5A_fake_token754a2ad06cc9903543f1e85"
-export EMAIL="jane@example.com"
-dnf install npm
-node samplefile.js
-Server running at http://127.0.0.1:3000/
+```shell
+cd [path_name]\server 
+npm install
 ```
 
-And repeat
+Now, you are ready to deploy the web application with AWS Elastic Beanstalk.
 
-```bash
-curl localhost:3000
-Thanks for looking at Code-and-Response!
+## Deploying the Web Application
+We will be deploying the application on a live server.
+
+### Live Server
+
+Still in the same "server" directory as before, now with AWS Elastic Beanstalk you need to deploy and host your backend server.
+
+```shell
+eb deploy
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why, if you were using something like `mocha` for instnance
-
-```bash
-npm install mocha --save-dev
-vi test/test.js
-./node_modules/mocha/bin/mocha
+Once it is finished, again, cd to your "client" folder and repeat the procedure to host your frontend server.
+```shell
+eb deploy
 ```
 
-### And coding style tests
-
-Explain what these tests test and why, if you chose `eslint` for example
-
-```bash
-npm install eslint --save-dev
-npx eslint --init
-npx eslint sample-file.js
-```
 
 ## Live demo
 
-You can find a running system to test at [callforcode.mybluemix.net](http://callforcode.mybluemix.net/)
+The running frontend dashboard can be found here: [http://acra-app-client-dev.us-east-1.elasticbeanstalk.com](http://acra-app-client-dev.us-east-1.elasticbeanstalk.com)
 
 ## Built with
 
-* [IBM Cloudant](https://cloud.ibm.com/catalog?search=cloudant#search_results) - The NoSQL database used
-* [IBM Cloud Functions](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - The compute platform for handing logic
-* [IBM API Connect](https://cloud.ibm.com/catalog?search=api%20connect#search_results) - The web framework used
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [AWS API Gateway](https://aws.amazon.com/api-gateway/) - To host our product as a serverless application
+* [AWS Lambda](https://aws.amazon.com/lambda/) - The compute platform for handing logic
+* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) - To host and deploy our product as a server based web application
+* [AWS Textract](https://aws.amazon.com/textract/) - Text-reading/recognition tool to extract words from images
+* [AWS Lex](https://aws.amazon.com/lex/) - To create our AI rule based chabot, EngiBot
+* [AWS S3](https://aws.amazon.com/s3/) - To store images and text files
+* [AWS RDS](https://aws.amazon.com/rds/) - To store relational schemas
+* [AWS DynamoDB](https://aws.amazon.com/dynamodb/) - To generate charts based on data stored
+* [AWS SES](https://aws.amazon.com/ses/) - To send an email notification to customers and ACRA officers
+* [AWS SNS](https://aws.amazon.com/sns/) - To send a SMS notification to customers and ACRA officers
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -142,14 +115,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
+* **Fleming Siow** - *Initial work* - [flemingsiow](https://github.com/flemingsiow)
+* **Woo Yan Seun** 
+* **Lim Hong Shun**
 
 ## License
 
 This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
-
-* Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
