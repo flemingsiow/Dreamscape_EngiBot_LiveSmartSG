@@ -260,7 +260,6 @@ class WaiverPage extends React.Component {
                         <th scope="col">Date Submitted</th>
                         <th scope="col">Applicant Name</th>
                         <th scope="col">Reasons</th>
-                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -272,7 +271,6 @@ class WaiverPage extends React.Component {
                         <td>{moment(myitem.RequestDate).format('DD-MMM-YYYY hh:mm')}</td>
                         <td>{myitem.ApplicantName}</td>
                         <td>{myitem.Reasons}</td>
-                        <td><button onClick={this.handleApprove}>Approve</button></td>
                     
                 </tr>
                 )}
